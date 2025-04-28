@@ -19,7 +19,14 @@ while True:
     opcao = input(menu)
 
     if opcao == '1':  # Depositar
-        pass
+        valor_deposito = float(input("Informe o valor de depósito: R$ "))
+
+        if valor_deposito > float(0):
+            saldo += valor_deposito
+            extrato += f"Depósito: R$ {valor_deposito:.2f}\n"
+
+        else:
+            print("Srª Cliente, insira valores maior que zero.")
 
     elif opcao == '2':  # Sacar
         pass
