@@ -53,10 +53,13 @@ while True:
             print("Valor inválido. Insira um valor maior que zero.")
 
     elif opcao == '3':  # Extrato
-        pass
+        print("\n================ EXTRATO ================")
+        print("Não foram realizadas movimentações." if not extrato else extrato)
+        print(f"\nSaldo: R$ {saldo:.2f}")
+        print("==========================================")
 
     elif opcao == '0':  # Sair
         break
 
     else:
-        print("Opção inválida, gentileza escolher a operação desejada.")
+        print("Opção inválida. Gentileza escolher a operação desejada.")
