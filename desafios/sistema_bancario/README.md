@@ -35,3 +35,8 @@ O sistema simula operações bancárias básicas utilizando a linguagem **Python
 ```bash
 python sistema_bancario.py
 ```
+
+## 📌 Observações
+
+- As operações são armazenadas apenas em memória (não há banco de dados ou arquivos).
+- O controle de saques diários é válido enquanto o programa estiver em execução.
