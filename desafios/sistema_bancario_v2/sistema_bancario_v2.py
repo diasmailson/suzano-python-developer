@@ -42,3 +42,9 @@ def sacar(*, saldo, valor, extrato, limite, numero_saques, limite_saque):
     else:
         print("\n @@@ Valor inválido. Insira um valor maior que zero. @@@")
     return saldo, extrato 
+
+def exibir_extrato(saldo, /, *, extrato):
+    print("\n================ EXTRATO ================")
+    print("Não foram realizadas movimentações." if not extrato else extrato)
+    print(f"\nSaldo: R$ {saldo:.2f}")
+    print("==========================================")
