@@ -87,5 +87,22 @@ def criar_conta(agencia, numero_conta, usuarios):
             "usuario": usuario
         }
     else:
-        print("\n @@@ Usuário não encontrado. @@@")     
+        print("\n @@@ Usuário não encontrado. @@@")  
+
+def listar_contas(contas):
+    if not contas:
+        print("\n @@@ Não há contas cadastradas. @@@")
+        return
+
+    for conta in contas:
+        linha = f"""Agência:\t{conta['agencia']}
+        Número da conta:\t{conta['numero_conta']}
+        Titular:\t{conta['usuario']['nome']}
+        CPF:\t{conta['usuario']['cpf']}
+        Endereço:\t{conta['usuario']['endereco']}
+        Data de nascimento:\t{conta['usuario']['data_nascimento']}"""
+
+        print("=" * 100)
+        print(textwrap.dedent(linha))
+        print("=" * 100)   
 
