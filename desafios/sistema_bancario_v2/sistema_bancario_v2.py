@@ -14,3 +14,12 @@ def menu():
     return input(textwrap.dedent(menu))
 
 
+def depositar(saldo, valor, extrato, /):    
+    if valor > 0:
+        saldo += valor
+        extrato += f"Depósito:\tR$ {valor:.2f}\n"
+        print("\n === Depósito realizado com sucesso! ===" \
+        "")
+    else:
+        print("\n @@@Valor inválido. Insira um valor maior que zero. @@@")
+    return saldo, extrato
