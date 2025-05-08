@@ -106,3 +106,49 @@ def listar_contas(contas):
         print(textwrap.dedent(linha))
         print("=" * 100)   
 
+def main():
+    AGENCIA = "0001"
+    
+    saldo = 0
+    limite = 500
+    extrato = ""
+    numero_saques = 0
+    limites_saques = 3
+    usuarios = []
+    contas = []
+
+    while True:
+        opcao = menu()
+        if opcao == "d":
+            valor = float(input("Informe o valor do depósito: "))
+            saldo, extrato = depositar(saldo, valor, extrato)
+        
+        elif opcao == "s":
+            valor = float(input("Informe o valor do saque: "))
+            
+            saldo, extrato = sacar(saldo = saldo, valor = valor, extrato = extrato, limite = limite, numero_saques = numero_saques, limite_saque = limites_saques)               
+        
+        elif opcao == "e":
+            exibir_extrato(saldo, extrato = extrato)
+       
+        elif opcao == "nu":
+           criar_usuario(usuarios)
+       
+        elif opcao == "nc":
+            numero_conta = len(contas) + 1
+            conta = criar_conta(AGENCIA, numero_conta, usuarios)
+
+            if conta:
+                contas.append(conta)
+                print("\n === Conta criada com sucesso! ===")
+        
+        elif opcao == "lc":
+            listar_contas(contas)
+        
+        elif opcao == "q":
+            print("Obrigado por usar o sistema! Até logo.")
+            break
+        else:
+            print("Opção inválida! Por favor, selecione uma opção válida.")
+
+main()
