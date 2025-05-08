@@ -63,18 +63,3 @@ while True:
 
     else:
         print("Opção inválida. Gentileza escolher a operação desejada.")
-
-def criar_conta(agencia, numero_conta, usuarios):
-    cpf = input("Informe o CPF do usuário: ")
-    usuario = filtrar_usuario(cpf, usuarios)
-
-    if usuario:
-        print("\n === Conta criada com sucesso! ===")
-        return {
-            "agencia": agencia,
-            "numero_conta": numero_conta,
-            "usuario": usuario
-        }
-    else:
-        print("\n @@@ Usuário não encontrado. @@@")   
-
