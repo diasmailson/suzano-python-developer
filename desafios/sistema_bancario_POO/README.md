@@ -4,7 +4,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Status](https://img.shields.io/badge/status-em%20desenvolvimento-yellow)](#)
 
-Sistema bancário simples desenvolvido com Programação Orientada a Objetos (POO) em Python. Simula operações básicas como abertura de contas, depósitos, saques e geração de extrato (histórico de transações).
+Sistema bancário desenvolvido com Programação Orientada a Objetos (POO) em Python. Simula operações básicas como abertura de contas, depósitos, saques e geração de extrato (histórico de transações).
 
 ---
 
