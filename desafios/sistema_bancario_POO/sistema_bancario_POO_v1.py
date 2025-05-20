@@ -3,7 +3,7 @@ from abc import ABC, abstractmethod, property
 
 
 class Cliente:
-    def __init__ (self, endereco: str, contas):
+    def __init__ (self, endereco, contas):
         self._endereco = endereco
         self.contas = []
 
